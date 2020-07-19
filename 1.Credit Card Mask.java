@@ -47,3 +47,34 @@ class Test{
         System.out.println(Maskify.maskify("hello"));
     }
 }
+
+/* Solution 1 */
+public class Maskify {
+    public static String maskify(String str) {
+        if (str.length() <= 4) return str;
+        String result = "";
+        for (int i = 0; i < str.length()-4; i++) {
+            result += "#";
+        }
+        return result + str.substring(str.length()-4);
+    }
+}
+
+/* Solution 2 */
+public class Maskify {
+    public static String maskify(String str) {
+        return str.replaceAll(".(?=.{4})", "#");
+    }
+}
+
+/* Solution 3 */
+
+public class Maskify {
+    public static String maskify(String str) {
+      char[] strChars = str.toCharArray();
+      for( int i = 0; i < strChars.length - 4; i++ ) {
+        strChars[i] = '#';
+      }
+      return new String(strChars);
+    }
+  }
