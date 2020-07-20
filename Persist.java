@@ -35,8 +35,9 @@ public class Persist {
     public static void main (String [] args) {
         System.out.println(persistence(39));
     }
+  };
     
-}
+
 
 /* Solution 1 
 
@@ -117,6 +118,4 @@ class Persist {
 }
 */
 
-*/
 
-*/
